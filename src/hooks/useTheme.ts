@@ -5,12 +5,13 @@ export function useTheme() {
 
   useEffect(() => {
     // Initiale Theme-Erkennung nach dem Mount
-    if (document.documentElement.classList.contains("dark")) {
+    if (document.documentElement.classList.contains("light")) {
       setTheme("dark");
     }
   }, []);
 
   useEffect(() => {
+    // sets the theme by adding the html class
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {

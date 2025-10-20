@@ -52,6 +52,7 @@ code {
   --sidebar-accent-foreground: #3a2d4a;
   --sidebar-border: #ebebf7;
   --sidebar-ring: #dedcf7;
+  --link: #204ad4;
 }
 
 .dark {
@@ -87,6 +88,7 @@ code {
   --sidebar-accent-foreground: #fcfcfc;
   --sidebar-border: #2d2a3a;
   --sidebar-ring: #6f6a8a;
+  --link: #204ad4;
 }
 
 @theme inline {

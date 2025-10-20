@@ -59,6 +59,9 @@ export default function Header() {
           <ThemeToggle />
           <LanguageSelect />
         </div>
+        <div className="flex md:hidden">
+          <MobileMenu/>
+        </div>
       </div>
     </header>
   );
