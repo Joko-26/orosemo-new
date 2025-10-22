@@ -12,7 +12,7 @@ export function LanguageSelect() {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="outline" role="combobox" className="w-[150px] justify-between">
+        <Button variant="outline" role="combobox" className="cursor-pointer w-[150px] justify-between">
           {availableLangs.find(l => l.code === lang)?.name ?? t.language}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -24,6 +24,7 @@ export function LanguageSelect() {
           <CommandGroup>
             {availableLangs.map(l => (
               <CommandItem
+                className="cursor-pointer"
                 key={l.code}
                 onSelect={() => {
                   setLang(l.code);

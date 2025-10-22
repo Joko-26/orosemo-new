@@ -7,7 +7,9 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <div className="text-center">
+    <div className="flex-col justify-items-center space-y-4">
+      <img src="/orosemo_name.png" alt="orsemo" className=''/>
+      <h1>Hello</h1>
     </div>
   )
 }
