@@ -53,6 +53,7 @@ code {
   --sidebar-border: #ebebf7;
   --sidebar-ring: #dedcf7;
   --link: #204ad4;
+  --link-hover: #7995f1;
 }
 
 .dark {
@@ -89,6 +90,7 @@ code {
   --sidebar-border: #2d2a3a;
   --sidebar-ring: #6f6a8a;
   --link: #204ad4;
+  --link-hover: #7995f1;
 }
 
 @theme inline {
@@ -128,6 +130,8 @@ code {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-link: var(--link);
+  --color-link-foreground: var(--link-hover);
 }
 
 @layer base {
