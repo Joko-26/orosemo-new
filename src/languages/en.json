@@ -6,5 +6,9 @@
   "contact": "Contact",
   "games": "Games",
   "language": "language",
-  "discord" : "Join my discord"
+  "discord" : "Join my discord",
+  "mainPage" : {
+    "Greeting" : "Hi, I'm Jakob Friedrich (Joko 26) 👋",
+    "subGreeting" : "A 15-year-old programmer from Germany 🇩🇪 building games, web apps, and creative tools to learn and share new ideas."
+  }
 }

@@ -53,11 +53,13 @@ function MobileMenu() {
 
 export default function Header() {
   return (
-    <header className="border-b pl-4">
+    <header className="border-b pl-4 sticky">
       <div className="flex w-full h-14 items-center justify-between border-r-border pr-4">
-        <div className="flex items-center gap-6">
+        <div className='flex items-center '>
           <img src="public/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10" />
-          <Link to="/" className="font-bold text-lg">Orosemo</Link>
+          <img className='h-10 w-auto object-contain' src="orosemo_name.png" alt="orosemo name" />
+        </div>
+        <div className="gap-5">
           <div className="hidden md:flex">
             <DesktopMenu />
           </div>

@@ -6,5 +6,9 @@
   "contact": "Kontakt",
   "games": "Spiele",
   "language": "Sprache",
-  "discord" : "Trete meinem discord server bei"
+  "discord" : "Trete meinem discord server bei",
+  "mainPage" : {
+    "Greeting" : "Hi, ich bin Jakob Friedrich (Joko 26) 👋",
+    "subGreeting" : "Ein 15-jähriger Programmierer aus Deutschland 🇩🇪, der Spiele, Web-Apps und kreative Tools entwickelt, um Neues zu lernen und Ideen zu teilen."
+  }
 }
