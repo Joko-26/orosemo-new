@@ -13,11 +13,11 @@ function DesktopMenu() {
   const { t } = useLanguage();
   return (
     <div className='flex gap-4'>
-      <Link to="/" className="text-sm font-medium hover:underline">{t.home}</Link>
-      <Link to="/games" className="text-sm font-medium hover:underline">{t.games}</Link>
-      <Link to="/tools" className="text-sm font-medium hover:underline">{t.tools}</Link>
-      <Link to="/contact" className="text-sm font-medium hover:underline">{t.contact}</Link>
-      <Link to="/about" className="text-sm font-medium hover:underline">{t.about}</Link>
+      <Link to="/" className="sm:text-lg font-medium hover:underline">{t.home}</Link>
+      <Link to="/games" className="sm:text-lg font-medium hover:underline">{t.games}</Link>
+      <Link to="/tools" className="sm:text-lg font-medium hover:underline">{t.tools}</Link>
+      <Link to="/contact" className="sm:text-lg font-medium hover:underline">{t.contact}</Link>
+      <Link to="/about" className="sm:text-lg font-medium hover:underline">{t.about}</Link>
     </div>
   );
 }
@@ -40,11 +40,11 @@ function MobileMenu() {
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
         <nav className="mt-4 flex flex-col gap-2 m-4">
-          <Link to="/" className="text-sm font-medium hover:underline" onClick={handleClose}>{t.home}</Link>
-          <Link to="/games" className="text-sm font-medium hover:underline" onClick={handleClose}>{t.games}</Link>
-          <Link to="/tools" className="text-sm font-medium hover:underline" onClick={handleClose}>{t.tools}</Link>
-          <Link to="/contact" className="text-sm font-medium hover:underline" onClick={handleClose}>{t.contact}</Link>
-          <Link to="/about" className="text-sm font-medium hover:underline" onClick={handleClose}>{t.about}</Link>
+          <Link to="/" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.home}</Link>
+          <Link to="/games" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.games}</Link>
+          <Link to="/tools" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.tools}</Link>
+          <Link to="/contact" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.contact}</Link>
+          <Link to="/about" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.about}</Link>
         </nav>
       </SheetContent>
     </Sheet>
@@ -56,8 +56,8 @@ export default function Header() {
     <header className="border-b pl-4 sticky">
       <div className="flex w-full h-14 items-center justify-between border-r-border pr-4">
         <div className='flex items-center '>
-          <img src="public/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10" />
-          <img className='h-10 w-auto object-contain' src="orosemo_name.png" alt="orosemo name" />
+          <img src="public/logos/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10 " />
+          <h1 className='sm:text-lg'>OROSEMO</h1>
         </div>
         <div className="gap-5">
           <div className="hidden md:flex">
