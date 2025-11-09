@@ -1,14 +1,23 @@
 {
-  "_name": "English",
+  "_name": "🇬🇧 English",
   "home": "Home",
   "about": "About",
   "tools": "Tools",
   "contact": "Contact",
   "games": "Games",
-  "language": "language",
-  "discord" : "Join my discord",
-  "mainPage" : {
-    "Greeting" : "Hi, I'm Jakob Friedrich (Joko 26) 👋",
-    "subGreeting" : "A 15-year-old programmer from Germany 🇩🇪 building games, web apps, and creative tools to learn and share new ideas."
+  "language": "Language",
+  "discord": "Join my Discord server",
+  "mainPage": {
+    "Greeting": "Hi, I'm Jakob Friedrich (Joko 26) 👋",
+    "subGreeting": "A 15-year-old programmer from Germany 🇩🇪 who creates games, web apps, and creative tools to learn new things and share ideas.",
+    "button" : "see more",
+    "cards": {
+      "discord": {
+        "head": "My Discord Community",
+        "text": "Welcome to the official Orosemo Discord – the community hub for our game studio! Connect with other fans, get early access to updates, and explore behind-the-scenes content from our projects. We also have community channels for sharing game dev tutorials, tips, and resources – perfect for anyone looking to learn or grow in game development. But in general, artists and gamers are also welcome to join our server and connect with others.",
+        "img": "/cardImg/discord.png",
+        "link": "https://tr.ee/Orosemo-Discord"
+      }
+    }
   }
 }

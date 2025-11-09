@@ -1,14 +1,23 @@
 {
-  "_name": "Deutsch",
+  "_name": "🇩🇪 Deutsch",
   "home": "Startseite",
   "about": "Über uns",
   "tools": "Werkzeuge",
   "contact": "Kontakt",
   "games": "Spiele",
   "language": "Sprache",
-  "discord" : "Trete meinem discord server bei",
-  "mainPage" : {
-    "Greeting" : "Hi, ich bin Jakob Friedrich (Joko 26) 👋",
-    "subGreeting" : "Ein 15-jähriger Programmierer aus Deutschland 🇩🇪, der Spiele, Web-Apps und kreative Tools entwickelt, um Neues zu lernen und Ideen zu teilen."
+  "discord": "Trete meinem discord server bei",
+  "mainPage": {
+    "Greeting": "Hi, ich bin Jakob Friedrich (Joko 26) 👋",
+    "subGreeting": "Ein 15-jähriger Programmierer aus Deutschland 🇩🇪, der Spiele, Web-Apps und kreative Tools entwickelt, um Neues zu lernen und Ideen zu teilen.",
+    "button" : "weiterlesen",
+    "cards": {
+      "discord": {
+        "head": "Meine discord Community",
+        "text": "Willkommen auf dem offiziellen Orosemo-Discord – dem Community-Hub unseres Game-Studios! Vernetze dich mit anderen Fans, erhalte frühzeitigen Zugang zu Updates und entdecke exklusive Einblicke hinter die Kulissen unserer Projekte. Außerdem bieten wir Community-Kanäle zum Teilen von Game-Dev-Tutorials, Tipps und Ressourcen – perfekt für alle, die in der Spieleentwicklung dazulernen oder wachsen möchten. Aber grundsätzlich sind auch Künstler*innen und Gamer herzlich eingeladen, unserem Server beizutreten und sich mit anderen auszutauschen.",
+        "img": "/cardImg/discord.png", 
+        "link": "https://tr.ee/Orosemo-Discord"
+      }
+    }
   }
 }

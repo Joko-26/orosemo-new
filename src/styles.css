@@ -21,6 +21,7 @@ code {
 :root {
   --background: #ffffff;
   --foreground: #231f2a;
+  --highlight: #2d8086;
   --card: #ffffff;
   --card-foreground: #231f2a;
   --popover: #ffffff;
@@ -59,6 +60,7 @@ code {
 .dark {
   --background: #09090b;
   --foreground: #fafafa;
+  --highlight: #2d8086;
   --card: #231f2a;
   --card-foreground: #fcfcfc;
   --popover: #231f2a;
@@ -96,6 +98,7 @@ code {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-highlight: var(--highlight);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -142,3 +145,22 @@ code {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg font-semibold text-foreground bg-background hover:bg-background/80 transition-colors cursor-pointer;
+  }
+
+  .card-border {
+    @apply border-4 rounded-lg border-highlight max-h-full m-4 md:m-15 lg:m-20 xl:m-30
+  }
+
+  .btn-link {
+    @apply px-4 py-2 rounded-lg font-semibold text-center text-foreground bg-link hover:bg-link-foreground transition-colors cursor-pointer min-w-5 md:min-w-15 lg:min-w-30 xl:min-w-50;
+  }
+
+  .headline {
+    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl
+  }
+}
+

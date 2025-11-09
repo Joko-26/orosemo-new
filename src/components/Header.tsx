@@ -9,6 +9,8 @@ import { LanguageSelect } from "@/components/LanguageSelect";
 import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
 
+import ScrollToTopButton from './ScrollToTop';
+
 function DesktopMenu() {
   const { t } = useLanguage();
   return (
@@ -53,11 +55,11 @@ function MobileMenu() {
 
 export default function Header() {
   return (
-    <header className="border-b pl-4 sticky">
+    <header className="border-b pl-4 sticky" id='header'>
       <div className="flex w-full h-14 items-center justify-between border-r-border pr-4">
-        <div className='flex items-center '>
-          <img src="public/logos/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10 " />
-          <h1 className='sm:text-lg'>OROSEMO</h1>
+        <div className='flex items-center space-x-1'>
+          <img src="public/logos/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10 gap-2" />
+          <span className="font-bold text-lg">Orosemo</span>
         </div>
         <div className="gap-5">
           <div className="hidden md:flex">
@@ -72,7 +74,9 @@ export default function Header() {
           <LanguageSelect/>
         </div>
       </div>
+      <ScrollToTopButton></ScrollToTopButton>
     </header>
+    
   )
 }
 
