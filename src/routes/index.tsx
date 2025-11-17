@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     setBgImage(images[Math.floor(Math.random() * images.length)]);
-  });
+  }, []);
 
   const cardsObj = t?.mainPage?.cards || {};
 
@@ -32,36 +32,54 @@ function App() {
     <div>
       <div>
         <div className="relative w-full h-screen">
-          <img className="w-full h-screen" src={BgImage} alt="bg-image" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-transparent rounded backdrop-blur-sm shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl">
-            <div className="space-y-3 p-4">
+         {BgImage && <img className="w-screen h-screen object-cover" src={BgImage} alt="bg-image" />}
+          <motion.div
+            initial={{ scale: 0.4 }}
+            whileInView={{ scale: 1 }}
+            exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-transparent rounded-xl bg-background/30  shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl"
+          >
+            <div className="space-y-3 p-4 text-foreground">
               <h1 className="headline">{t.mainPage.Greeting}</h1>
-              <p>{t.mainPage.subGreeting}</p>
+              <p>{t?.mainPage?.subGreeting}</p>
             </div>
             <div className="flex flex-col items-center">
-              <button
-                className="btn-primary"
+              <motion.button
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{
+                  scale: 0.9,
+                  transition: { scale: { type: "spring", duration: 0.01 } },
+                }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="btn-primary m-4"
                 onClick={() => scrollToSection("content")}
               >
-                {t.mainPage.button}
-              </button>
+                {t?.mainPage?.button}
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-      <div
-        className="flex flex-col items-center justify-center"
-        id="content"
-      ></div>
-      {Object.entries(cardsObj).map(([key, card]: [string, any]) => (
-        <DefaultCard
-          key={key}
-          headline={card.head ?? card.headline ?? ""}
-          secondary={card.text ?? card.secondary ?? ""}
-          image={card.img ?? card.image ?? ""}
-          link={card.link}
+      <div className="flex flex-col items-center justify-center gap-2" id="content">
+        <img
+          className="justify-self-center p-5"
+          src="/logos/orosemo_name.png"
+          alt="orosemo name"
         />
-      ))}
+        {Object.entries(cardsObj).map(([key, card]: [string, any]) => (
+          <DefaultCard
+            key={key}
+            headline={card.head ?? card.headline ?? ""}
+            secondary={card.text ?? card.secondary ?? ""}
+            image={card.img ?? card.image ?? ""}
+            link={card.link}
+            linkName={card.linkName}
+          />
+        ))}
+      </div>
     </div>
   );
 }

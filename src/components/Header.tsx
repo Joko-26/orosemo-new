@@ -15,11 +15,11 @@ function DesktopMenu() {
   const { t } = useLanguage();
   return (
     <div className='flex gap-4'>
-      <Link to="/" className="sm:text-lg font-medium hover:underline">{t.home}</Link>
-      <Link to="/games" className="sm:text-lg font-medium hover:underline">{t.games}</Link>
-      <Link to="/tools" className="sm:text-lg font-medium hover:underline">{t.tools}</Link>
-      <Link to="/contact" className="sm:text-lg font-medium hover:underline">{t.contact}</Link>
-      <Link to="/about" className="sm:text-lg font-medium hover:underline">{t.about}</Link>
+      <Link to="/" className="text-l md:text-xl lg:text-2xl xl:text-3xl font-medium hover:underline">{t.home}</Link>
+      <Link to="/games" className="text-l md:text-xl lg:text-2xl xl:text-3xl font-medium hover:underline">{t.games}</Link>
+      <Link to="/tools" className="text-l md:text-xl lg:text-2xl xl:text-3xl font-medium hover:underline">{t.tools}</Link>
+      <Link to="/contact" className="text-l md:text-xl lg:text-2xl xl:text-3xl font-medium hover:underline">{t.contact}</Link>
+      <Link to="/about" className="text-l md:text-xl lg:text-2xl xl:text-3xl font-medium hover:underline">{t.about}</Link>
     </div>
   );
 }
@@ -33,20 +33,20 @@ function MobileMenu() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger>
-        <Button variant="ghost" size="icon">
-          <Menu className='h-6 w-6'></Menu>
+        <Button variant="ghost" className='h-10 w-10' size="icon">
+          <Menu className='h-20 w-20'></Menu>
         </Button>
       </SheetTrigger>
       <SheetContent side='left'>
         <SheetHeader>
-          <SheetTitle>Menu</SheetTitle>
+          <SheetTitle className='headline'>Menu</SheetTitle>
         </SheetHeader>
         <nav className="mt-4 flex flex-col gap-2 m-4">
-          <Link to="/" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.home}</Link>
-          <Link to="/games" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.games}</Link>
-          <Link to="/tools" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.tools}</Link>
-          <Link to="/contact" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.contact}</Link>
-          <Link to="/about" className="sm:text-lg font-medium hover:underline" onClick={handleClose}>{t.about}</Link>
+          <Link to="/" className="headline font-medium hover:underline" onClick={handleClose}>{t.home}</Link>
+          <Link to="/games" className="headline font-medium hover:underline" onClick={handleClose}>{t.games}</Link>
+          <Link to="/tools" className="headline font-medium hover:underline" onClick={handleClose}>{t.tools}</Link>
+          <Link to="/contact" className="headline font-medium hover:underline" onClick={handleClose}>{t.contact}</Link>
+          <Link to="/about" className="headline font-medium hover:underline" onClick={handleClose}>{t.about}</Link>
         </nav>
       </SheetContent>
     </Sheet>
@@ -56,10 +56,10 @@ function MobileMenu() {
 export default function Header() {
   return (
     <header className="border-b pl-4 sticky" id='header'>
-      <div className="flex w-full h-14 items-center justify-between border-r-border pr-4">
+      <div className="flex w-full h-16 items-center justify-between border-r-border pr-4">
         <div className='flex items-center space-x-1'>
-          <img src="public/logos/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10 gap-2" />
-          <span className="font-bold text-lg">Orosemo</span>
+          <img src="/logos/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10 gap-2" />
+          <span className="font-bold text-l md:text-xl lg:text-2xl xl:text-3xl">Orosemo</span>
         </div>
         <div className="gap-5">
           <div className="hidden md:flex">

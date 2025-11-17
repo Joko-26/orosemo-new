@@ -1,5 +1,5 @@
 {
-  "_name": "🇩🇪 Deutsch",
+  "_name": "Deutsch",
   "home": "Startseite",
   "about": "Über uns",
   "tools": "Werkzeuge",
@@ -7,6 +7,7 @@
   "games": "Spiele",
   "language": "Sprache",
   "discord": "Trete meinem discord server bei",
+  "ai": "Nicht KI generiert",
   "mainPage": {
     "Greeting": "Hi, ich bin Jakob Friedrich (Joko 26) 👋",
     "subGreeting": "Ein 15-jähriger Programmierer aus Deutschland 🇩🇪, der Spiele, Web-Apps und kreative Tools entwickelt, um Neues zu lernen und Ideen zu teilen.",
@@ -14,10 +15,19 @@
     "cards": {
       "discord": {
         "head": "Meine discord Community",
-        "text": "Willkommen auf dem offiziellen Orosemo-Discord – dem Community-Hub unseres Game-Studios! Vernetze dich mit anderen Fans, erhalte frühzeitigen Zugang zu Updates und entdecke exklusive Einblicke hinter die Kulissen unserer Projekte. Außerdem bieten wir Community-Kanäle zum Teilen von Game-Dev-Tutorials, Tipps und Ressourcen – perfekt für alle, die in der Spieleentwicklung dazulernen oder wachsen möchten. Aber grundsätzlich sind auch Künstler*innen und Gamer herzlich eingeladen, unserem Server beizutreten und sich mit anderen auszutauschen.",
+        "text": "Willkommen auf dem offiziellen Orosemo-Discord, dem Community-Hub unseres Game-Studios! Vernetze dich mit anderen Fans, erhalte frühzeitigen Zugang zu Updates und entdecke exklusive Einblicke hinter die Kulissen unserer Projekte. Außerdem bieten wir Community-Kanäle zum Teilen von Game-Dev-Tutorials, Tipps und Ressourcen – perfekt für alle, die in der Spieleentwicklung dazulernen oder wachsen möchten. Aber grundsätzlich sind auch Künstler*innen und Gamer herzlich eingeladen, unserem Server beizutreten und sich mit anderen auszutauschen.",
         "img": "/cardImg/discord.png", 
-        "link": "https://tr.ee/Orosemo-Discord"
+        "link": "https://tr.ee/Orosemo-Discord",
+        "linkName": "Trete jetzt bei"
+      },
+      "itch": {
+        "head": "Mein Itch.io seite",
+        "text": "Hier findest du alle meine Spiele, Prototypen und Asset-Packs, alles, woran ich gerade arbeite oder experimentiere.Ich nutze itch.io, um meine Projekte mit der Community zu teilen.Neben fertigen kleinen Spielen lade ich hier auch Tools hoch, die einen Blick hinter meine Entwicklung geben. Wenn du Spaß daran hast, neue Spiele auszuprobieren bist du hier genau richtig.",
+        "img": "/cardImg/itch.png", 
+        "link": "https://orosemo.itch.io/",
+        "linkName": "Jetzt ansehen"
       }
+
     }
   }
 }

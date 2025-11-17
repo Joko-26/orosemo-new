@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 
@@ -7,7 +8,7 @@ export default function ScrollToTopButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY > 50);
+      setVisible(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -18,21 +19,20 @@ export default function ScrollToTopButton() {
     setVisible(false);
   };
 
-  return (
+  const button = (
     <AnimatePresence>
       {visible && (
         <motion.button
           key="scrollTop"
           onClick={scrollToTop}
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.25 }}
           className="
-            fixed bottom-6 right-6 z-50
-            rounded-full bg-blue-600 text-white
-            p-3 shadow-lg hover:bg-blue-700
-            focus:outline-none focus:ring-2 focus:ring-blue-400 z-30
+            fixed bottom-8 right-6 z-[9999]
+            rounded-full bg-highlight  text-white
+            p-6 shadow-lg hover:bg-highlight-hover
           "
         >
           <ArrowUp className="h-5 w-5" />
@@ -40,4 +40,10 @@ export default function ScrollToTopButton() {
       )}
     </AnimatePresence>
   );
+
+  // render the button into document.body so it's not clipped by ancestor containers
+  if (typeof document !== "undefined") {
+    return createPortal(button, document.body);
+  }
+  return null;
 }
