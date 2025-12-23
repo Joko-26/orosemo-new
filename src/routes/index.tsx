@@ -3,6 +3,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import DefaultCard from "../components/DefaultCard";
+import { ChevronDown } from "lucide-react";
+
 
 export const Route = createFileRoute("/")({
   component: App,
@@ -29,10 +31,19 @@ function App() {
   const cardsObj = t?.mainPage?.cards || {};
 
   return (
-    <div>
+    <motion.div>
       <div>
         <div className="relative w-full h-screen">
-         {BgImage && <img className="w-screen h-screen object-cover" src={BgImage} alt="bg-image" />}
+          {BgImage && (
+            <motion.img
+              className="w-screen h-screen object-cover"
+              src={BgImage}
+              alt="bg-image"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            />
+          )}
           <motion.div
             initial={{ scale: 0.4 }}
             whileInView={{ scale: 1 }}
@@ -46,24 +57,29 @@ function App() {
               <p>{t?.mainPage?.subGreeting}</p>
             </div>
             <div className="flex flex-col items-center">
+
               <motion.button
                 initial={{ scale: 1 }}
-                whileHover={{ scale: 1.04 }}
+                whileHover={{ scale: 1.05,}}
                 whileTap={{
                   scale: 0.9,
                   transition: { scale: { type: "spring", duration: 0.01 } },
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="btn-primary m-4"
+                className=""
                 onClick={() => scrollToSection("content")}
               >
-                {t?.mainPage?.button}
+                <ChevronDown className="scale-250 m-5 hover:bg-black/30 rounded-md"/>
               </motion.button>
+
             </div>
           </motion.div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-2" id="content">
+      <div
+        className="flex flex-col items-center justify-center gap-2"
+        id="content"
+      >
         <img
           className="justify-self-center p-5"
           src="/logos/orosemo_name.png"
@@ -80,6 +96,6 @@ function App() {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,33 +1,33 @@
 {
   "_name": "Deutsch",
   "home": "Startseite",
-  "about": "Über uns",
-  "tools": "Werkzeuge",
+  "about": "Über mich",
+  "tools": "Tools",
   "contact": "Kontakt",
   "games": "Spiele",
   "language": "Sprache",
-  "discord": "Trete meinem discord server bei",
-  "ai": "Nicht KI generiert",
+  "discord": "Tritt meinem Discord-Server bei",
+  "ai": "Nicht KI-generiert",
   "mainPage": {
     "Greeting": "Hi, ich bin Jakob Friedrich (Joko 26) 👋",
-    "subGreeting": "Ein 15-jähriger Programmierer aus Deutschland 🇩🇪, der Spiele, Web-Apps und kreative Tools entwickelt, um Neues zu lernen und Ideen zu teilen.",
-    "button" : "weiterlesen",
+    "subGreeting": "Ein 15-jähriger Programmierer aus Deutschland, der Spiele, Web-Apps und Tools entwickelt, um neue Dinge zu lernen und Ideen zu teilen.",
+    "button": "mehr anzeigen",
+    "contactButton": "Kontakt aufnehmen",
     "cards": {
       "discord": {
-        "head": "Meine discord Community",
-        "text": "Willkommen auf dem offiziellen Orosemo-Discord, dem Community-Hub unseres Game-Studios! Vernetze dich mit anderen Fans, erhalte frühzeitigen Zugang zu Updates und entdecke exklusive Einblicke hinter die Kulissen unserer Projekte. Außerdem bieten wir Community-Kanäle zum Teilen von Game-Dev-Tutorials, Tipps und Ressourcen – perfekt für alle, die in der Spieleentwicklung dazulernen oder wachsen möchten. Aber grundsätzlich sind auch Künstler*innen und Gamer herzlich eingeladen, unserem Server beizutreten und sich mit anderen auszutauschen.",
-        "img": "/cardImg/discord.png", 
+        "head": "Meine Discord-Community",
+        "text": "Willkommen im offiziellen Orosemo-Discord, meinem Community-Hub. Hier kannst du dich mit anderen vernetzen, frühzeitig Updates erhalten und Wissen mit Gleichgesinnten austauschen. Außerdem findest du Community-Kanäle zum Chatten, Zusammenarbeiten und Präsentieren deiner eigenen Projekte. Jeder ist herzlich eingeladen, dem Server beizutreten und Teil der Community zu werden!",
+        "img": "/cardImg/discord.png",
         "link": "https://tr.ee/Orosemo-Discord",
-        "linkName": "Trete jetzt bei"
+        "linkName": "Jetzt beitreten"
       },
       "itch": {
-        "head": "Mein Itch.io seite",
-        "text": "Hier findest du alle meine Spiele, Prototypen und Asset-Packs, alles, woran ich gerade arbeite oder experimentiere.Ich nutze itch.io, um meine Projekte mit der Community zu teilen.Neben fertigen kleinen Spielen lade ich hier auch Tools hoch, die einen Blick hinter meine Entwicklung geben. Wenn du Spaß daran hast, neue Spiele auszuprobieren bist du hier genau richtig.",
-        "img": "/cardImg/itch.png", 
+        "head": "Meine Itch.io-Seite",
+        "text": "Hier findest du all meine Spiele sowie alles, was dazugehört: Asset-Packs, Demos, Game-Jam-Projekte (kleine Gamedev-Wettbewerbe (WIP 😅)) und mehr. Folge mir, wenn du sehen möchtest, was ich in Zukunft alles bauen werde!",
+        "img": "/cardImg/itch.png",
         "link": "https://orosemo.itch.io/",
         "linkName": "Jetzt ansehen"
       }
-
     }
   }
 }

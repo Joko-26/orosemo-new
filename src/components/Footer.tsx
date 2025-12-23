@@ -44,6 +44,19 @@ export default function Footer() {
             alt=""
           />
         </a>
+
+        <a
+          href="https://www.youtube.com/@Orosemo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <img
+            className="flex icon self-center justify-self-center"
+            src="/cardImg/youtube.png"
+            alt=""
+          />
+        </a>
       </div>
       <div className="flex gap-1">
         <BotOff />
