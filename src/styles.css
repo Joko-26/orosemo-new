@@ -151,7 +151,7 @@ code {
 
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 rounded-lg font-semibold text-foreground bg-background hover:bg-background/80 transition-colors cursor-pointer;
+    @apply px-4 py-2 rounded-lg font-semibold text-foreground bg-highlight hover:bg-highlight/80 transition-colors cursor-pointer;
   }
 
   .card-border {

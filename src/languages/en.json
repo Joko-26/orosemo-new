@@ -29,5 +29,11 @@
         "linkName": "View now"
       }
     }
+  }, 
+  "gamesPage": {
+    "headline": "My Games",
+    "subHeadline": "All games i've made so far.",
+    "search": "Spiel suchen",
+    "searchButton": "Suchen"
   }
 }

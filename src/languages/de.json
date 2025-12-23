@@ -29,5 +29,13 @@
         "linkName": "Jetzt ansehen"
       }
     }
+  }, 
+  "gamesPage": {
+    "headline": "Meine Spiele",
+    "subHeadline": "Alle Spiele, die ich bisher Programmierert habe.",
+    "search": "Spiel suchen",
+    "searchButton": "Suchen"
   }
+
+  
 }
