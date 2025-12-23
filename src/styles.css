@@ -155,11 +155,11 @@ code {
   }
 
   .card-border {
-    @apply border-4 rounded-lg border-highlight max-h-full my-3 mx-4 md:mx-15 lg:mx-20 xl:mx-30 hover:border-highlight-hover shadow-2xl transition-shadow duration-200 ease-in-out
+    @apply border-4 rounded-lg border-highlight max-h-full  my-3 mx-4 md:mx-15 lg:mx-20 xl:mx-30 hover:border-highlight-hover shadow-2xl transition-shadow duration-200 ease-in-out
   }
 
   .btn-link {
-    @apply px-4 py-2 rounded-lg font-semibold text-center text-foreground bg-link hover:bg-link-foreground transition-colors cursor-pointer min-w-5 md:min-w-15 lg:min-w-30 xl:min-w-50;
+    @apply px-4 py-2 rounded-lg font-semibold text-center text-foreground bg-highlight hover:bg-highlight/80 transition-colors cursor-pointer min-w-5 md:min-w-15 lg:min-w-30 xl:min-w-50;
   }
 
   .headline {
@@ -168,6 +168,10 @@ code {
 
   .icon {
     @apply max-h-9 max-w-9
+  }
+
+  .input {
+    @apply border-4 rounded-lg border-highlight
   }
 }
 

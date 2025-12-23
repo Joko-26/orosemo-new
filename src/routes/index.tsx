@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/context/LanguageContext";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import DefaultCard from "../components/DefaultCard";
+import DefaultCard from "../components/Cards";
 import { ChevronDown } from "lucide-react";
 
 
