@@ -1,6 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { AnimatePresence, easeOut, motion, scale } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { DiWindows, DiLinux, DiApple } from "react-icons/di";
 
 export default function DefaultCard({
   headline,
@@ -40,26 +39,28 @@ export default function DefaultCard({
           exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
           transition={{ duration: 0.5, ease: "easeInOut"  }}
           viewport={{ once: true, amount: 0.3 }}
-          className="card-border flex flex-col text-sm md:text-lg lg:text-xl xl:text-2xl p-5"
+          className="card-border flex w-full flex-row gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-7xl"
         > 
-          <h1 className="headline text-center">{headline}</h1>
-          <div className="flex items-center justify-between gap-3">         
-            <img
-              className="max-h-48 max-w-48"
-              src={image}
-              alt="image"
-            />
-            <div className="flex flex-col items-center text-center justify-center gap-2">
-              <p>{secondary}</p>
-            
+          <div className="flex flex-col">
+            <h1 className="headline text-center">{headline}</h1>
+            <div className="flex flex-row items-center gap-6 md:flex-row md:items-start md:justify-between">         
+              <img
+                className="h-32 w-32 object-contain md:h-48 md:w-48"
+                src={image}
+                alt="image"
+              />
+              <div className="flex flex-1 flex-col items-center md:items-center justify-center gap-4 text-center md:text-left">
+                <p className="leading-relaxed">{secondary}</p>
+              </div>
+            </div>
+            <div className="items-center">
+              {linkElement && (
+                <div className="flex justify-center">
+                  {linkElement}
+                </div>
+              )}              
             </div>
 
-            <div className="flex flex-col items-center text-center justify-center">
-              
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            {linkElement}
           </div>
         </motion.div>
       </AnimatePresence>
@@ -75,7 +76,8 @@ export function ProjectCard({
   link,
   linkName,
   link2,
-  linkName2
+  linkName2,
+  plattforms
 }: {
   Name: string;
   description: string;
@@ -84,6 +86,7 @@ export function ProjectCard({
   linkName?: string;
   link2?: string;
   linkName2?: string;
+  plattforms?: string;
 }) {
 
   const linkElement = link ? (
@@ -116,6 +119,12 @@ export function ProjectCard({
     </motion.a>
   ) : null;
 
+  const plattformElement = plattforms ? (
+    <div className="flex flex-row">
+      {}
+    </div>
+  ) : null;
+
   return (
     <>
       <AnimatePresence>
@@ -125,24 +134,21 @@ export function ProjectCard({
           exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
           transition={{ duration: 0.5, ease: "easeInOut"  }}
           viewport={{ once: true, amount: 0.3 }}
-          className="card-border flex flex-col text-sm md:text-lg lg:text-xl xl:text-2xl p-5"
+          className="card-border flex w-full flex-col gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-7xl"
         > 
           <h1 className="headline text-center">{Name}</h1>
-          <div className="flex items-center justify-between gap-8">         
+          <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         
             <img
-              className="max-h-48 max-w-48 min-h-47 min-w-47"
+              className="h-32 w-32 object-contain md:h-48 md:w-48"
               src={image}
               alt="image"
             />
-            <div className="flex flex-col items-center text-center justify-center gap-2">
-              <p>{description}</p>
-            
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              {linkElement}{linkElement2}
-            </div>
-            <div className="flex flex-col items-center text-center justify-center">
-            
+            <div className="flex flex-1 flex-col items-center md:items-start text-center md:text-left gap-4">
+              <p className="leading-relaxed">{description}</p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                {linkElement}
+                {linkElement2}
+              </div>
             </div>
           </div>
 

@@ -52,9 +52,14 @@ function App() {
             viewport={{ once: true, amount: 0.3 }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-transparent rounded-xl bg-background/30  shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl"
           >
-            <div className="space-y-3 p-4 text-foreground">
-              <h1 className="headline">{t.mainPage.Greeting}</h1>
-              <p>{t?.mainPage?.subGreeting}</p>
+            <div className="space-y-3 p-4 text-foreground flex flex-col gap-5 md:flex row">
+              <div>
+                <img className="rounded-full max-w-20 md:max-w-30 lg:max-w-40 xl:max-w-50" src="/pfp/pfp-christmas.jpeg" alt="" />
+              </div>
+              <div>
+                <h1 className="headline">{t.mainPage.Greeting}</h1>
+                <p>{t?.mainPage?.subGreeting}</p>                
+              </div>
             </div>
             <div className="flex flex-col items-center">
 
