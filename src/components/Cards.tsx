@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { DiWindows, DiLinux, DiApple } from "react-icons/di";
+import { DiWindows, DiLinux, DiApple, DiHtml5} from "react-icons/di";
+import { AiFillAndroid } from "react-icons/ai";
 
 export default function DefaultCard({
   headline,
@@ -121,7 +122,23 @@ export function ProjectCard({
 
   const plattformElement = plattforms ? (
     <div className="flex flex-row">
-      {}
+      {plattforms.split(":").map((plattform, id) => {
+        if (plattform == "Win"){
+          return <DiWindows key={id}/>
+        };
+        if (plattform == "Web"){
+          return <DiHtml5 key={id}/>
+        };
+        if (plattform == "Mac"){
+          return <DiApple key={id}/>
+        };
+        if (plattform == "Lin"){
+          return <DiLinux key={id}/>
+        }; 
+        if (plattform == "And"){
+          return <AiFillAndroid key={id}/>
+        };
+      })}
     </div>
   ) : null;
 
@@ -145,6 +162,9 @@ export function ProjectCard({
             />
             <div className="flex flex-1 flex-col items-center md:items-start text-center md:text-left gap-4">
               <p className="leading-relaxed">{description}</p>
+              <div className="flex flex-row">
+                {plattformElement}
+              </div>
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
                 {linkElement}
                 {linkElement2}

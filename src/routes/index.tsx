@@ -50,7 +50,7 @@ function App() {
             exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-transparent rounded-xl bg-background/30  shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-transparent rounded-xl bg-background/30  shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl leading-relaxed"
           >
             <div className="space-y-3 p-4 text-foreground flex flex-col gap-5 md:flex row">
               <div>

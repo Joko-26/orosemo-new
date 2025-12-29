@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { GanttChart, Search } from "lucide-react";
 import { useState } from "react";
 import { ProjectCard } from "../components/Cards";
+import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/games")({
   component: RouteComponent,
@@ -26,9 +27,12 @@ function RouteComponent() {
         <h1 className="headline">{t?.gamesPage?.headline}</h1>
         <p>{t.gamesPage?.subHeadline}</p>
         <div className="flex flex-row justify-center p-5 space-x-5">
-          <input
+          <motion.input
+            initial={{ scale: 0.95 }}
+            whileHover={{ scale: 1 }}
+            whileFocus={{ scale: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="px-4 py-2 input"
-            type="email"
             placeholder={t?.gamesPage?.search}
             onChange={(e) => SetQuery(e.target.value)}
           />
@@ -42,6 +46,7 @@ function RouteComponent() {
             image={game.img}
             link={game.link}
             linkName={t.gamesPage?.play}
+            plattforms={game?.platforms}
           />
         ))}
       </div>
