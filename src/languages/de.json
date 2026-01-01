@@ -34,7 +34,6 @@
     "headline": "Meine Spiele",
     "subHeadline": "Alle Spiele, die ich bisher Programmierert habe.",
     "search": "Spiel suchen",
-    "searchButton": "Suchen",
     "play": "Auf Itch.io spielen",
     "games" :{
       "Jolly Jumper":{
@@ -51,6 +50,29 @@
         "platforms": "Win:Web",
         "link": "https://orosemo.itch.io/easter",
         "img": "/games-tools/easter-egg-logo.png"
+      }
+    }
+  },
+  "toolsPage": {
+    "headline": "Meine Tools",
+    "subHeadline": "Alle Tools, die ich bisher Programmierert habe.",
+    "search": "Tool suchen",
+    "tools": {
+      "QR-Code Generator":{
+        "id":1,
+        "description":"Erstelle QR-Codes online kostenlos und passe sie nach Belieben an.",
+        "platforms": "Web",
+        "link1": "https://qrcode-creator.orosemo.de/*Website",
+        "link2": "https://github.com/Joko-26/QR-Code-generator/tree/master*Github Repository",
+        "img": "/games-tools/qr-code-gen-logo.png"
+      },
+      "Jam Management Discord Bot":{
+        "id":2,
+        "description":"Verwalte Jams (Wettbewerbe) in deinen Discord-Servern ganz einfach.",
+        "platforms": "Dis",
+        "link1": "https://qrcode-creator.orosemo.de/*Install it on your Server",
+        "link2": "https://github.com/Joko-26/QR-Code-generator/tree/master*Github Repository",
+        "img": "/games-tools/jam-bot-logo.png"
       }
     }
   }

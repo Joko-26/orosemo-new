@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { DiWindows, DiLinux, DiApple, DiHtml5} from "react-icons/di";
 import { AiFillAndroid } from "react-icons/ai";
+import { FaDiscord } from "react-icons/fa";
 
 export default function DefaultCard({
   headline,
@@ -43,7 +44,7 @@ export default function DefaultCard({
           className="card-border flex w-full flex-row gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-7xl"
         > 
           <div className="flex flex-col">
-            <h1 className="headline text-center">{headline}</h1>
+            <h1 className="headline text-center pb-5">{headline}</h1>
             <div className="flex flex-row items-center gap-6 md:flex-row md:items-start md:justify-between">         
               <img
                 className="h-32 w-32 object-contain md:h-48 md:w-48"
@@ -137,6 +138,9 @@ export function ProjectCard({
         }; 
         if (plattform == "And"){
           return <AiFillAndroid key={id}/>
+        };
+        if (plattform == "Dis"){
+          return <FaDiscord key={id}/>
         };
       })}
     </div>
