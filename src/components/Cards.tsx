@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { DiWindows, DiLinux, DiApple, DiHtml5} from "react-icons/di";
 import { AiFillAndroid } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
+import { getAssetPath } from "@/lib/assets";
 
 export default function DefaultCard({
   headline,
@@ -48,7 +49,7 @@ export default function DefaultCard({
             <div className="flex flex-row items-center gap-6 md:flex-row md:items-start md:justify-between">         
               <img
                 className="h-32 w-32 object-contain md:h-48 md:w-48"
-                src={image}
+                src={getAssetPath(image)}
                 alt="image"
               />
               <div className="flex flex-1 flex-col items-center md:items-center justify-center gap-4 text-center md:text-left">
@@ -161,7 +162,7 @@ export function ProjectCard({
           <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         
             <img
               className="h-32 w-32 object-contain md:h-48 md:w-48"
-              src={image}
+              src={getAssetPath(image)}
               alt="image"
             />
             <div className="flex flex-1 flex-col items-center md:items-start text-center md:text-left gap-4">

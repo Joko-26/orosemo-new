@@ -9,6 +9,12 @@ import { LanguageProvider } from './context/LanguageContext';
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 
+// Set global base URL for assets
+declare global {
+  var __BASE_URL__: string
+}
+globalThis.__BASE_URL__ = import.meta.env.BASE_URL || '/'
+
 // Create a new router instance
 const router = createRouter({
   routeTree,

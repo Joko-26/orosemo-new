@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import DefaultCard from "../components/Cards";
 import { ChevronDown } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 
 export const Route = createFileRoute("/")({
@@ -14,9 +15,9 @@ function App() {
   const { t } = useLanguage();
   const [BgImage, setBgImage] = useState("");
   const images = [
-    "/backgrounds/2.png",
-    "/backgrounds/image2.png",
-    "/backgrounds/image3.png",
+    getAssetPath("/backgrounds/2.png"),
+    getAssetPath("/backgrounds/image2.png"),
+    getAssetPath("/backgrounds/image3.png"),
   ];
 
   const scrollToSection = (sectionIn: string) => {
@@ -54,7 +55,7 @@ function App() {
           >
             <div className="space-y-3 p-4 text-foreground flex flex-col gap-5 md:flex row">
               <div>
-                <img className="rounded-full max-w-20 md:max-w-30 lg:max-w-40 xl:max-w-50" src="/pfp/pfp-christmas.jpeg" alt="" />
+                <img className="rounded-full max-w-20 md:max-w-30 lg:max-w-40 xl:max-w-50" src={getAssetPath("/pfp/pfp-christmas.jpeg")} alt="" />
               </div>
               <div>
                 <h1 className="headline">{t.mainPage.Greeting}</h1>
@@ -87,7 +88,7 @@ function App() {
       >
         <img
           className="justify-self-center p-5"
-          src="/logos/orosemo_name.png"
+          src={getAssetPath("/logos/orosemo_name.png")}
           alt="orosemo name"
         />
         {Object.entries(cardsObj).map(([key, card]: [string, any]) => (

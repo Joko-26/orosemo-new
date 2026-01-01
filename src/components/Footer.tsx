@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { BotOff } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -16,7 +17,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src="/cardImg/discord.png"
+            src={"/cardImg/discord.png"}
             alt=""
           />
         </a>
@@ -28,7 +29,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src="/cardImg/itch.png"
+            src={"/cardImg/itch.png"}
             alt=""
           />
         </a>
@@ -40,7 +41,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src="/cardImg/bluesky.png"
+            src={"/cardImg/bluesky.png"}
             alt=""
           />
         </a>
@@ -53,7 +54,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src="/cardImg/youtube.png"
+            src={"/cardImg/youtube.png"}
             alt=""
           />
         </a>

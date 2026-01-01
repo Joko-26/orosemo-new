@@ -8,6 +8,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageSelect } from "@/components/LanguageSelect";
 import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
+import { getAssetPath } from '@/lib/assets';
 
 import ScrollToTopButton from './ScrollToTop';
 
@@ -58,7 +59,7 @@ export default function Header() {
     <header className="border-b pl-4 sticky" id='header'>
       <div className="flex w-full h-16 items-center justify-between border-r-border pr-4">
         <div className='flex items-center space-x-1'>
-          <img src="/logos/ororsemo_logo_trans_100.png" alt="orosemo" className="cursor-pointer h-10 gap-2" />
+          <img src={getAssetPath("/logos/ororsemo_logo_trans_100.png")} alt="orosemo" className="cursor-pointer h-10 gap-2" />
           <span className="font-bold text-l md:text-xl lg:text-2xl xl:text-3xl">Orosemo</span>
         </div>
         <div className="gap-5">
