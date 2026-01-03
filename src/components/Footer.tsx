@@ -17,7 +17,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src={"/cardImg/discord.png"}
+            src={getAssetPath("/cardImg/discord.png")}
             alt=""
           />
         </a>
@@ -29,7 +29,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src={"/cardImg/itch.png"}
+            src={getAssetPath("/cardImg/itch.png")}
             alt=""
           />
         </a>
@@ -41,7 +41,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src={"/cardImg/bluesky.png"}
+            src={getAssetPath("/cardImg/bluesky.png")}
             alt=""
           />
         </a>
@@ -54,7 +54,7 @@ export default function Footer() {
           {" "}
           <img
             className="flex icon self-center justify-self-center"
-            src={"/cardImg/youtube.png"}
+            src={getAssetPath("/cardImg/youtube.png")}
             alt=""
           />
         </a>

@@ -42,17 +42,17 @@ export default function DefaultCard({
           exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
           transition={{ duration: 0.5, ease: "easeInOut"  }}
           viewport={{ once: true, amount: 0.3 }}
-          className="card-border flex w-full flex-row gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-7xl"
+          className="card-border flex flex-col w-full gap-6 p-5 text-sm lg:flex-row md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
         > 
           <div className="flex flex-col">
             <h1 className="headline text-center pb-5">{headline}</h1>
-            <div className="flex flex-row items-center gap-6 md:flex-row md:items-start md:justify-between">         
+            <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         
               <img
                 className="h-32 w-32 object-contain md:h-48 md:w-48"
                 src={getAssetPath(image)}
                 alt="image"
               />
-              <div className="flex flex-1 flex-col items-center md:items-center justify-center gap-4 text-center md:text-left">
+              <div className="flex flex-1 flex-col items-center md:items-start gap-4 text-center md:text-left">
                 <p className="leading-relaxed">{secondary}</p>
               </div>
             </div>
@@ -156,7 +156,7 @@ export function ProjectCard({
           exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
           transition={{ duration: 0.5, ease: "easeInOut"  }}
           viewport={{ once: true, amount: 0.3 }}
-          className="card-border flex w-full flex-col gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-7xl"
+          className="card-border flex w-full flex-col gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
         > 
           <h1 className="headline text-center">{Name}</h1>
           <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         

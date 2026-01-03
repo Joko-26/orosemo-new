@@ -6,7 +6,6 @@ import DefaultCard from "../components/Cards";
 import { ChevronDown } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 
-
 export const Route = createFileRoute("/")({
   component: App,
 });
@@ -51,22 +50,25 @@ function App() {
             exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-transparent rounded-xl bg-background/30  shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl leading-relaxed"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[90%] border-transparent rounded-xl bg-background/30 leading-relaxed shadow-lg text-sm md:text-lg lg:text-xl xl:text-2xl"
           >
-            <div className="space-y-3 p-4 text-foreground flex flex-col gap-5 md:flex row">
+            <div className="space-y-3 p-4 text-foreground flex flex-col items-center gap-5 md:flex-row md:items-center">
               <div>
-                <img className="rounded-full max-w-20 md:max-w-30 lg:max-w-40 xl:max-w-50" src={getAssetPath("/pfp/pfp-christmas.jpeg")} alt="" />
+                <img
+                  className="rounded-full justify-self-center self-center max-w-20 md:justify-self-start md:max-w-30 lg:max-w-40 xl:max-w-50"
+                  src={getAssetPath("/pfp/pfp-christmas.jpeg")}
+                  alt=""
+                />
               </div>
               <div>
-                <h1 className="headline">{t.mainPage.Greeting}</h1>
-                <p>{t?.mainPage?.subGreeting}</p>                
+                <h1 className="headline leading-loose">{t.mainPage.Greeting}</h1>
+                <p>{t?.mainPage?.subGreeting}</p>
               </div>
             </div>
             <div className="flex flex-col items-center">
-
               <motion.button
                 initial={{ scale: 1 }}
-                whileHover={{ scale: 1.05,}}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{
                   scale: 0.9,
                   transition: { scale: { type: "spring", duration: 0.01 } },
@@ -75,32 +77,31 @@ function App() {
                 className=""
                 onClick={() => scrollToSection("content")}
               >
-                <ChevronDown className="scale-250 m-5 hover:bg-black/30 rounded-md"/>
+                <ChevronDown className="scale-250 m-5 hover:bg-black/30 rounded-md" />
               </motion.button>
-
             </div>
           </motion.div>
         </div>
       </div>
-      <div
-        className="flex flex-col items-center justify-center gap-2"
-        id="content"
-      >
+      <div className="flex flex-col items-center justify-center" id="content">
         <img
           className="justify-self-center p-5"
           src={getAssetPath("/logos/orosemo_name.png")}
+
           alt="orosemo name"
         />
-        {Object.entries(cardsObj).map(([key, card]: [string, any]) => (
-          <DefaultCard
-            key={key}
-            headline={card.head ?? card.headline ?? ""}
-            secondary={card.text ?? card.secondary ?? ""}
-            image={card.img ?? card.image ?? ""}
-            link={card.link}
-            linkName={card.linkName}
-          />
-        ))}
+        <div className="flex flex-col items-center justify-center gap-y-2 mx-10 sm:mx-5 md:mx-0">
+          {Object.entries(cardsObj).map(([key, card]: [string, any]) => (
+            <DefaultCard
+              key={key}
+              headline={card.head ?? card.headline ?? ""}
+              secondary={card.text ?? card.secondary ?? ""}
+              image={card.img ?? card.image ?? ""}
+              link={card.link}
+              linkName={card.linkName}
+            />
+          ))}
+        </div>
       </div>
     </motion.div>
   );

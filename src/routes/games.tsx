@@ -38,7 +38,7 @@ function RouteComponent() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-center justify-center gap-y-2 mx-10 sm:mx-5 md:mx-0">
         {filteredGames.map(([name, game]) => (
           <ProjectCard
             Name={name}
