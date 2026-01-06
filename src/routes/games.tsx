@@ -23,7 +23,7 @@ function RouteComponent() {
 
   return (
     <div className="flex flex-col self-center text-center ">
-      <div className="space-y-3 p-4 text-foreground text-sm md:text-lg lg:text-xl xl:text-2xl">
+      <div className="site-headline">
         <h1 className="headline">{t?.gamesPage?.headline}</h1>
         <p>{t.gamesPage?.subHeadline}</p>
         <div className="flex flex-row justify-center p-5 space-x-5">

@@ -56,8 +56,8 @@ function MobileMenu() {
 
 export default function Header() {
   return (
-    <header className="border-b pl-4 sticky" id='header'>
-      <div className="flex w-full h-16 items-center justify-between border-r-border pr-4">
+    <header className="border-b md:pl-4 sticky" id='header'>
+      <div className="flex w-full h-16 items-center justify-between border-r-border md:pr-4">
         <div className='flex items-center space-x-1 scale-75 sm:scale-90 md:scale-100'>
           <img src={getAssetPath("/logos/ororsemo_logo_trans_100.png")} alt="orosemo" className="cursor-pointer h-10 gap-2" />
           <span className="font-bold text-l md:text-xl lg:text-2xl xl:text-3xl">Orosemo</span>

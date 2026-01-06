@@ -23,7 +23,7 @@
       },
       "itch": {
         "head": "My Itch.io page",
-        "text": "Here you’ll find all my games, plus everything else related to them: asset packs, demos, Game Jam projects (small gamedev competitions (WIP 😅) and more. Follow me if you want to see everything ill build in teh future!",
+        "text": "Here you’ll find all my games, plus everything else related to them: asset packs, demos, Game Jam projects (small gamedev competitions (WIP 😅) and more. Follow me if you want to see everything ill build in the future!",
         "img": "/cardImg/itch.png",
         "link": "https://orosemo.itch.io/",
         "linkName": "View now"
@@ -71,6 +71,52 @@
         "link1": "https://qrcode-creator.orosemo.de/*Install it on your Server",
         "link2": "https://github.com/Joko-26/QR-Code-generator/tree/master*Github Repository",
         "img": "/games-tools/jam-bot-logo.png"
+      }
+    }
+  },
+    "contactsPage": {
+    "headline": "Get in touch",
+    "subHeadline": "I look forward to your messages",
+    "cards":{
+      "discord": {
+        "head": "My Discord Community",
+        "text": "Welcome to the official Orosemo Discord, my community hub. Here you can connect with others, get early access to updates, and exchange knowledge with other like minded. You’ll also find community channels for chatting, collaborating, and showcasing your own creations. Everyone is warmly invited to join the server and engage with the community!",
+        "img": "/cardImg/discord.png",
+        "link": "https://tr.ee/Orosemo-Discord",
+        "linkName": "Join now"
+      },
+      "bluesky": {
+        "head": "My Bluesky Account",
+        "text": "Follow me on Bluesky to stay up to date with my latest projects, announcements, and thoughts. This is where I share progress updates, insights, and things I’m currently working on.",
+        "img": "/cardImg/bluesky.png",
+        "link": "https://bsky.app/profile/orosemo.de",
+        "linkName": "Follow now"
+      },
+      "itch": {
+        "head": "My Itch.io Page",
+        "text": "Here you’ll find all my games, plus everything else related to them: asset packs, demos, Game Jam projects (small gamedev competitions (WIP 😅) and more. Follow me if you want to see everything ill build in the future!",
+        "img": "/cardImg/itch.png",
+        "link": "https://orosemo.itch.io/",
+        "linkName": "View page"
+      },
+      "slack": {
+        "head": "My Slack Profile",
+        "text": "Feel free to send me a message.",
+        "img": "/cardImg/slack.png",
+        "link": "https://hackclub.enterprise.slack.com/team/U0A5GJ8JP5F",
+        "linkName": "Send me a message"
+      },
+      "linktree": {
+        "head": "My Linktree",
+        "text": "Here you can find all important links.",
+        "img": "/cardImg/linktree.png",
+        "link": "https://linktr.ee/Orosemo",
+        "linkName": "View Linktree"
+      },
+      "email": {
+        "head": "My Email",
+        "text": "Feel free to send me an email, I’ll try to reply as soon as possible.",
+        "email": "contact@orosemo.de"
       }
     }
   }

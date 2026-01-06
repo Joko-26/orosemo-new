@@ -155,7 +155,7 @@ code {
   }
 
   .card-border {
-    @apply border-4 rounded-lg border-highlight max-h-full  my-3 mx-4 md:mx-15 lg:mx-20 xl:mx-30 hover:border-highlight-hover shadow-2xl transition-shadow duration-200 ease-in-out
+    @apply border-4 rounded-lg border-highlight my-3 mx-4 md:mx-15 lg:mx-20 xl:mx-30 hover:border-highlight-hover shadow-2xl transition-shadow duration-200 ease-in-out
   }
 
   .btn-link {
@@ -172,6 +172,10 @@ code {
 
   .input {
     @apply border-4 rounded-lg border-highlight hover:border-highlight-hover
+  }
+
+  .site-headline {
+    @apply space-y-3 p-4 text-foreground text-sm md:text-lg lg:text-xl xl:text-2xl
   }
 }
 
