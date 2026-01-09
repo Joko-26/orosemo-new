@@ -1,15 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { DiWindows, DiLinux, DiApple, DiHtml5} from "react-icons/di";
+import { DiWindows, DiLinux, DiApple, DiHtml5 } from "react-icons/di";
 import { AiFillAndroid } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
 import { getAssetPath } from "@/lib/assets";
+import type { ClassDictionary } from "clsx";
 
 export default function DefaultCard({
   headline,
   secondary,
   image,
   link,
-  linkName
+  linkName,
 }: {
   headline: string;
   secondary: string;
@@ -17,17 +18,19 @@ export default function DefaultCard({
   link?: string;
   linkName?: string;
 }) {
-
   const linkElement = link ? (
     <motion.a
       className="btn-link"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{scale:1}}
-      whileHover={{scale: 1.04}}
-      whileTap={{scale: 0.9, transition: {scale: { type: "spring", duration:0.01}}}}
-      transition={{duration:0.3, ease: "easeOut"}}
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{
+        scale: 0.9,
+        transition: { scale: { type: "spring", duration: 0.01 } },
+      }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {linkName}
     </motion.a>
@@ -39,14 +42,14 @@ export default function DefaultCard({
         <motion.div
           initial={{ scale: 0.8, y: 100 }}
           whileInView={{ scale: 1, y: 0 }}
-          exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
-          transition={{ duration: 0.5, ease: "easeInOut"  }}
+          exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
           className="card-border flex flex-col w-full gap-6 p-5 text-sm lg:flex-row md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
-        > 
+        >
           <div className="flex flex-col">
             <h1 className="headline text-center pb-5">{headline}</h1>
-            <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         
+            <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">
               <img
                 className="h-32 w-32 object-contain md:h-48 md:w-48"
                 src={getAssetPath(image)}
@@ -58,19 +61,15 @@ export default function DefaultCard({
             </div>
             <div className="items-center">
               {linkElement && (
-                <div className="flex justify-center">
-                  {linkElement}
-                </div>
-              )}              
+                <div className="flex justify-center">{linkElement}</div>
+              )}
             </div>
-
           </div>
         </motion.div>
       </AnimatePresence>
     </>
   );
 }
-
 
 export function ProjectCard({
   Name,
@@ -80,7 +79,7 @@ export function ProjectCard({
   linkName,
   link2,
   linkName2,
-  plattforms
+  plattforms,
 }: {
   Name: string;
   description: string;
@@ -91,32 +90,37 @@ export function ProjectCard({
   linkName2?: string;
   plattforms?: string;
 }) {
-
   const linkElement = link ? (
     <motion.a
       className="btn-link"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{scale:1}}
-      whileHover={{scale: 1.04}}
-      whileTap={{scale: 0.9, transition: {scale: { type: "spring", duration:0.01}}}}
-      transition={{duration:0.3, ease: "easeOut"}}
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{
+        scale: 0.9,
+        transition: { scale: { type: "spring", duration: 0.01 } },
+      }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {linkName}
     </motion.a>
   ) : null;
 
-    const linkElement2 = link2 ? (
+  const linkElement2 = link2 ? (
     <motion.a
       className="btn-link"
       href={link2}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{scale:1}}
-      whileHover={{scale: 1.04}}
-      whileTap={{scale: 0.9, transition: {scale: { type: "spring", duration:0.01}}}}
-      transition={{duration:0.3, ease: "easeOut"}}
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{
+        scale: 0.9,
+        transition: { scale: { type: "spring", duration: 0.01 } },
+      }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {linkName2}
     </motion.a>
@@ -125,24 +129,24 @@ export function ProjectCard({
   const plattformElement = plattforms ? (
     <div className="flex flex-row">
       {plattforms.split(":").map((plattform, id) => {
-        if (plattform == "Win"){
-          return <DiWindows key={id}/>
-        };
-        if (plattform == "Web"){
-          return <DiHtml5 key={id}/>
-        };
-        if (plattform == "Mac"){
-          return <DiApple key={id}/>
-        };
-        if (plattform == "Lin"){
-          return <DiLinux key={id}/>
-        }; 
-        if (plattform == "And"){
-          return <AiFillAndroid key={id}/>
-        };
-        if (plattform == "Dis"){
-          return <FaDiscord key={id}/>
-        };
+        if (plattform == "Win") {
+          return <DiWindows key={id} />;
+        }
+        if (plattform == "Web") {
+          return <DiHtml5 key={id} />;
+        }
+        if (plattform == "Mac") {
+          return <DiApple key={id} />;
+        }
+        if (plattform == "Lin") {
+          return <DiLinux key={id} />;
+        }
+        if (plattform == "And") {
+          return <AiFillAndroid key={id} />;
+        }
+        if (plattform == "Dis") {
+          return <FaDiscord key={id} />;
+        }
       })}
     </div>
   ) : null;
@@ -153,13 +157,13 @@ export function ProjectCard({
         <motion.div
           initial={{ scale: 0.8, y: 100 }}
           whileInView={{ scale: 1, y: 0 }}
-          exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
-          transition={{ duration: 0.5, ease: "easeInOut"  }}
+          exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
           className="card-border flex w-full flex-col gap-6 p-5 text-sm md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
-        > 
+        >
           <h1 className="headline text-center">{Name}</h1>
-          <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         
+          <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">
             <img
               className="h-32 w-32 object-contain md:h-48 md:w-48"
               src={getAssetPath(image)}
@@ -167,82 +171,71 @@ export function ProjectCard({
             />
             <div className="flex flex-1 flex-col items-center md:items-start text-center md:text-left gap-4">
               <p className="leading-relaxed">{description}</p>
-              <div className="flex flex-row">
-                {plattformElement}
-              </div>
+              <div className="flex flex-row">{plattformElement}</div>
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
                 {linkElement}
                 {linkElement2}
               </div>
             </div>
           </div>
-
         </motion.div>
       </AnimatePresence>
     </>
   );
 }
 
-export function contactCard({
+export function ContactCard({
   headline,
-  secondary,
-  image,
-  link,
-  linkName
+  dict,
+  direction,
 }: {
   headline: string;
-  secondary: string;
-  image: string;
-  link?: string;
-  linkName?: string;
+  buttonName: string;
+  dict: { [key: string]: { img: string; link: string } };
+  direction: number;
 }) {
-
-  const linkElement = link ? (
-    <motion.a
-      className="btn-link"
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{scale:1}}
-      whileHover={{scale: 1.04}}
-      whileTap={{scale: 0.9, transition: {scale: { type: "spring", duration:0.01}}}}
-      transition={{duration:0.3, ease: "easeOut"}}
-    >
-      {linkName}
-    </motion.a>
-  ) : null;
-
   return (
     <>
       <AnimatePresence>
         <motion.div
-          initial={{ scale: 0.8, y: 100 }}
-          whileInView={{ scale: 1, y: 0 }}
-          exit={{ scale: 0.8, transition: { scale: { duration: 0.2 }}}}
-          transition={{ duration: 0.5, ease: "easeInOut"  }}
+          initial={{ scale: 0.8, x: direction }}
+          whileInView={{ scale: 1, x: 0 }}
+          exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
           className="card-border flex flex-col w-full gap-6 p-5 text-sm lg:flex-row md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
-        > 
+        >
           <div className="flex flex-col">
             <h1 className="headline text-center pb-5">{headline}</h1>
-            <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between">         
-              <img
-                className="h-32 w-32 object-contain md:h-48 md:w-48"
-                src={getAssetPath(image)}
-                alt="image"
-              />
-              <div className="flex flex-1 flex-col items-center md:items-start gap-4 text-center md:text-left">
-                <p className="leading-relaxed">{secondary}</p>
-              </div>
+            <div className="flex flex-col gap-5">
+              {Object.entries(dict).map(([name, item], index) => {
+                return (
+                  <div className="flex flex-row justify-between
+                  
+                  items-center w-full" key={index}>
+                    <div className="flex flex-row items-center gap-2">
+                      <img className="max-h-9 max-w-9" src={item.img} alt="" />
+                      <h1>{name}</h1>
+                    </div>
+                    <motion.a
+                      className="btn-link"
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ scale: 1 }}
+                      whileHover={{ scale: 1.04 }}
+                      whileTap={{
+                        scale: 0.9,
+                        transition: { scale: { type: "spring", duration: 0.01 } },
+                      }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    >
+                      {item.button}
+                    </motion.a>
+                  </div>
+                );
+              })}
             </div>
-            <div className="items-center">
-              {linkElement && (
-                <div className="flex justify-center">
-                  {linkElement}
-                </div>
-              )}              
-            </div>
-
           </div>
         </motion.div>
       </AnimatePresence>
