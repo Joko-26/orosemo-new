@@ -203,36 +203,43 @@ export function ContactCard({
           exit={{ scale: 0.8, transition: { scale: { duration: 0.2 } } }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="card-border flex flex-col w-full gap-6 p-5 text-sm lg:flex-row md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
+          className="card-border flex flex-col w-full gap-6 p-5 text-sm  md:text-lg lg:text-xl xl:text-2xl max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-6xl"
         >
           <div className="flex flex-col">
             <h1 className="headline text-center pb-5">{headline}</h1>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-8">
               {Object.entries(dict).map(([name, item], index) => {
                 return (
-                  <div className="flex flex-row justify-between
-                  
-                  items-center w-full" key={index}>
-                    <div className="flex flex-row items-center gap-2">
-                      <img className="max-h-9 max-w-9" src={item.img} alt="" />
-                      <h1>{name}</h1>
-                    </div>
-                    <motion.a
-                      className="btn-link"
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      initial={{ scale: 1 }}
-                      whileHover={{ scale: 1.04 }}
-                      whileTap={{
-                        scale: 0.9,
-                        transition: { scale: { type: "spring", duration: 0.01 } },
-                      }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
+                  <div>
+                    <div
+                      className="flex flex-row justify-between items-center w-full"
+                      key={index}
                     >
-                      {item.button}
-                    </motion.a>
+                      <div className="flex flex-row flex-grow items-center gap-2">
+                        <img className="max-h-9 md:max-h-11 lg:max-h-13 xl:max-h-15 max-w-9 md:max-w-11 lg:max-w-13 xl:max-w-15" src={item.img} alt="" />
+                        <h1 className="text-md  md:text-xl lg:text-2xl xl:text-4xl">{name}</h1>
+                      </div>
+                      <motion.a
+                        className="btn-link"
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ scale: 1 }}
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{
+                          scale: 0.9,
+                          transition: {
+                            scale: { type: "spring", duration: 0.01 },
+                          },
+                        }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                      >
+                        {item.button}
+                      </motion.a>
+                    </div>                    
                   </div>
+
+                  
                 );
               })}
             </div>
