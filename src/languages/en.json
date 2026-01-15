@@ -122,5 +122,12 @@
       "text": "Feel free to send me an email, I’ll try to reply as soon as possible.",
       "email": "contact@orosemo.de"
     }
+  },
+
+  "aboutPage":{
+    "head":"Hi, I'm Jakob Friedrich (Joko 26) 👋",
+    "overview": "A 15-year-old programmer from Germany creating games, web apps, and tools to learn new things and share ideas.",
+    "skills":"My strenghts:",
+    "tools":"My favourite tools:"
   }
 }

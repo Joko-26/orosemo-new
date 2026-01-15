@@ -216,7 +216,7 @@ export function ContactCard({
                       key={index}
                     >
                       <div className="flex flex-row flex-grow items-center gap-2">
-                        <img className="max-h-9 md:max-h-11 lg:max-h-13 xl:max-h-15 max-w-9 md:max-w-11 lg:max-w-13 xl:max-w-15" src={item.img} alt="" />
+                        <img className="max-h-9 md:max-h-11 lg:max-h-13 xl:max-h-15 max-w-9 md:max-w-11 lg:max-w-13 xl:max-w-15" src={getAssetPath(item.img)} alt="" />
                         <h1 className="text-md  md:text-xl lg:text-2xl xl:text-4xl">{name}</h1>
                       </div>
                       <motion.a
